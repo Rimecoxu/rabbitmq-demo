@@ -31,7 +31,7 @@ public class ClientDemoTests {
      * @description : 测试直连交换机
      */
     @Test
-    public void testDirectProvider() throws IOException {
+    public void testProvider() throws IOException {
         // 获取连接
         Connection connection = MQSupportUtil.getConnection();
         // 创建通道
@@ -88,7 +88,7 @@ public class ClientDemoTests {
      * @description : 测试消费者
      */
     @Test
-    public void testDirectConsumer() throws IOException {
+    public void testConsumer() throws IOException {
         // 获取连接
         Connection connection = MQSupportUtil.getConnection();
         // 创建通道
