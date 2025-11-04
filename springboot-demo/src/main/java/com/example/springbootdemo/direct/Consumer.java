@@ -3,7 +3,6 @@ package com.example.springbootdemo.direct;
 import com.example.springbootdemo.config.DirectRabbitMqConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.stereotype.Component;
 
 /**
  * @Author: Rimecoxu@gmail.com
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Component;
  * RabbitListener随SpringBoot启动，启动时监听队列，有消息则调用方法处理消息
  */
 @Slf4j
-@Component
+// @Component
 public class Consumer {
 
     @RabbitListener(queues = DirectRabbitMqConfig.SP_DIRECT_QUEUE_NAME_1)
