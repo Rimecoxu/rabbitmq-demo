@@ -1,0 +1,16 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+# 应用服务名称
+spring:
+  application:
+    name: rabbitmq-springboot-demo
+  #  rabbitmq队列配置
+  rabbitmq:
+    host: 192.168.99.99
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: vhost-1
+
+
