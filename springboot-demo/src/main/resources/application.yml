@@ -12,5 +12,24 @@ spring:
     username: admin
     password: admin
     virtual-host: vhost-1
+    #    开启发布确认：correlated-异步，simple-同步
+    publisher-confirm-type: correlated
+    #    开启消息回退
+    publisher-returns: true
+
+    #    设置MQ的超时连接时间（s,ms）
+    connection-timeout: 3s
+    template:
+      #      生产不建议开启生产者重连模式
+      retry:
+        #        开启生产者重连（默认false）
+        enabled: true
+        #        开启最大重连次数
+        max-attempts: 3
+        #        连接失败后重连间隔时间
+        initial-interval: 1000
+        #        等候时长的递增倍数，比如1000ms，重连失败后，下次重连时间是1000ms*2=2000ms
+        multiplier: 1
+
 
 
