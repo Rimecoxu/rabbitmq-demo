@@ -30,6 +30,10 @@ spring:
         initial-interval: 1000
         #        等候时长的递增倍数，比如1000ms，重连失败后，下次重连时间是1000ms*2=2000ms
         multiplier: 1
+    listener:
+      simple:
+        #        消息预读取最大条数
+        prefetch: 10
 
 
 
