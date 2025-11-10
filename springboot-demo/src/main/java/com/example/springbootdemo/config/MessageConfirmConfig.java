@@ -6,7 +6,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.ReturnedMessage;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: Rimecoxu@gmail.com
@@ -14,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description: 消息发布确认配置
  */
 @Slf4j
-@Configuration
+// @Configuration
 public class MessageConfirmConfig implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnsCallback {
 
     @Resource
