@@ -32,6 +32,7 @@ public class RabbitMqConfig {
     public Queue queue() {
         // durable: 持久化
         return QueueBuilder.durable(SP_DIRECT_QUEUE_NAME).build();
+        // return QueueBuilder.durable(SP_DIRECT_QUEUE_NAME).ttl(15000).build(); // 设置队列消息过期时间
     }
 
     /**
