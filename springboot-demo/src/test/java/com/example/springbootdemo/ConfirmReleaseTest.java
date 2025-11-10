@@ -1,6 +1,6 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.confirmrelease.Provider1;
+import com.example.springbootdemo.confirmrelease.Provider3;
 import java.util.UUID;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -17,8 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class ConfirmReleaseTest {
 
-    @Resource(name = "provider1")
-    private Provider1 provider;
+    @Resource(name = "provider3")
+    private Provider3 provider;
 
     /**
      * @description : 测试发布确认

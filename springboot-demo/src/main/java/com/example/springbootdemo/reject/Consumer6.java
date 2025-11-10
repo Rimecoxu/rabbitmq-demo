@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: Rimecoxu@gmail.com
  * @CreateTime: 2025-11-10 22:58
- * @Description: 消息拒收
+ * @Description: 消息拒收消费方
  */
 @Slf4j
 @Component

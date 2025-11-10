@@ -15,7 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @Slf4j
 @SpringBootTest
-public class PersistMsgTest {
+public class PersistTest {
 
     @Resource(name = "provider2")
     private Provider2 provider;

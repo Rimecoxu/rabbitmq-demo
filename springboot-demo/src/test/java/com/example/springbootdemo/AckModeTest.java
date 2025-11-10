@@ -1,7 +1,7 @@
 package com.example.springbootdemo;
 
+import com.example.springbootdemo.ackmode.Provider1;
 import com.example.springbootdemo.config.RabbitMqConfig;
-import com.example.springbootdemo.direct.Provider;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -17,12 +17,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class AckModeTest {
 
     @Resource
-    private Provider provider;
+    private Provider1 provider1;
 
     @Test
     void process() {
         for (int i = 1; i <= 3; i++) {
-            provider.sendMessage("Message-" + i, RabbitMqConfig.SP_DIRECT_ROUTING_KEY);
+            provider1.sendMessage("Message-" + i, RabbitMqConfig.SP_DIRECT_ROUTING_KEY);
         }
     }
 }

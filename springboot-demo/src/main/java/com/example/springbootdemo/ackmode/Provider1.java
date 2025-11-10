@@ -1,4 +1,4 @@
-package com.example.springbootdemo.reject;
+package com.example.springbootdemo.ackmode;
 
 import com.example.springbootdemo.config.DirectRabbitMqConfig;
 import javax.annotation.Resource;
@@ -8,17 +8,19 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Author: Rimecoxu@gmail.com
- * @CreateTime: 2025-11-10 22:08
- * @Description: 拒收消息提供方
+ * @CreateTime: 2025-11-04 22:39
+ * @Description: 直连交换机--生产者
  */
 @Slf4j
 @Component
-public class Provider6 {
+public class Provider1 {
+
     @Resource
     private RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message, String routingKey) {
-        log.info("生产者6号发送消息: {}", message);
+        log.info("生产者1号发送消息: {}", message);
         rabbitTemplate.convertAndSend(DirectRabbitMqConfig.SP_DIRECT_EXCHANGE_NAME, routingKey, message);
     }
+
 }

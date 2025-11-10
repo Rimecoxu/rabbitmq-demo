@@ -16,7 +16,7 @@ import org.springframework.messaging.handler.annotation.Header;
  */
 @Slf4j
 // @Component
-public class Consumer {
+public class Consumer1 {
 
     /**
      * 监听队列，不确认，如果消费消息时出现错误，消息不会回到队列，存在消息丢失的风险
@@ -25,13 +25,13 @@ public class Consumer {
      */
     // @RabbitListener(queues = RabbitMqConfig.SP_DIRECT_QUEUE_NAME, ackMode = "NONE")
     public void receive1(String message) {
-        log.info("消费者, 接收到消息: {}", message);
+        log.info("消费者receive1, 接收到消息: {}", message);
 
         if (message.equals("Message-3")) {
             int a = 1 / 0;
         }
 
-        log.info("消费者, 开始处理消息: {}", message);
+        log.info("消费者receive1, 开始处理消息: {}", message);
     }
 
     /**
@@ -41,11 +41,11 @@ public class Consumer {
      */
     // @RabbitListener(queues = RabbitMqConfig.SP_DIRECT_QUEUE_NAME, ackMode = "AUTO")
     public void receive2(String message) {
-        log.info("消费者, 接收到消息: {}", message);
+        log.info("消费者receive2, 接收到消息: {}", message);
         if (message.equals("Message-3")) {
             int a = 1 / 0;
         }
-        log.info("消费者, 开始处理消息: {}", message);
+        log.info("消费者receive2, 开始处理消息: {}", message);
     }
 
 
@@ -57,14 +57,14 @@ public class Consumer {
     @RabbitListener(queues = RabbitMqConfig.SP_DIRECT_QUEUE_NAME, ackMode = "MANUAL")
     public void receive3(String message, Channel channel, @Header(AmqpHeaders.DELIVERY_TAG) long deliveryTag) throws IOException {
         try {
-            log.info("消费者, 接收到消息: {}", message);
+            log.info("消费者receive3, 接收到消息: {}", message);
             if (message.equals("Message-3")) {
                 int a = 1 / 0;
             }
-            log.info("消费者, 开始处理消息: {}", message);
+            log.info("消费者receive3, 开始处理消息: {}", message);
             channel.basicAck(deliveryTag, false);
         } catch (Exception e) {
-            log.error("消费者, 处理消息失败: {}", message);
+            log.error("消费者receive3, 处理消息失败: {}", message);
             /**
              * 拒绝消息，并重新入队，并再次尝试消费
              */

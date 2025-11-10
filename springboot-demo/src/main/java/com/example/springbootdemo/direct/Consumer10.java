@@ -13,7 +13,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 @Slf4j
 // @Component
 @RabbitListener(queues = DirectRabbitMqConfig.SP_DIRECT_QUEUE_NAME_1)
-public class Consumer1 {
+public class Consumer10 {
 
     @RabbitHandler
     public void receive(String message) {

@@ -1,4 +1,4 @@
-package com.example.springbootdemo.config;
+package com.example.springbootdemo.confirmrelease;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;

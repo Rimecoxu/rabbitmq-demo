@@ -14,13 +14,13 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class Provider1 {
+public class Provider3 {
 
     @Resource
     private RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message, String routingKey, CorrelationData correlationData) {
-        log.info("生产者发送消息: {}", message);
+        log.info("生产者3号发送消息: {}", message);
         rabbitTemplate.convertAndSend(DirectRabbitMqConfig.SP_DIRECT_EXCHANGE_NAME, routingKey, message, correlationData);
     }
 }

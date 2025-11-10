@@ -12,12 +12,12 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
  */
 @Slf4j
 // @Component
-@RabbitListener(queues = DirectRabbitMqConfig.SP_DIRECT_QUEUE_NAME_3)
-public class Consumer3 {
+@RabbitListener(queues = DirectRabbitMqConfig.SP_DIRECT_QUEUE_NAME_2)
+public class Consumer20 {
 
     @RabbitHandler
     public void receive(String message) {
-        log.info("消费者3号, 接收到消息: {}", message);
+        log.info("消费者2号, 接收到消息: {}", message);
     }
 
 }

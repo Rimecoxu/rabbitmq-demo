@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: Rimecoxu@gmail.com
  * @CreateTime: 2025-11-05 18:28
- * @Description: 消息持久化
+ * @Description: 持久化消息提供者
  */
 @Slf4j
 @Component
@@ -22,7 +22,7 @@ public class Provider2 {
     private RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message, String routingKey, MessageDeliveryMode messageDeliveryMode) {
-        log.info("生产者发送消息: {}", message);
+        log.info("生产者2号发送消息: {}", message);
         Message msg = MessageBuilder
                 .withBody(message.getBytes())
                 // 设置消息发送模式

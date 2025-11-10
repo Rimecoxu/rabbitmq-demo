@@ -1,7 +1,7 @@
 package com.example.springbootdemo;
 
 import com.example.springbootdemo.config.RabbitMqConfig;
-import com.example.springbootdemo.confirmrelease.Provider1;
+import com.example.springbootdemo.prefetch.Provider4;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -15,10 +15,10 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @Slf4j
 @SpringBootTest
-public class MsgPreFetchTest {
+public class PreFetchTest {
 
-    @Resource(name = "provider1")
-    private Provider1 provider;
+    @Resource(name = "provider4")
+    private Provider4 provider;
 
     @Test
     void process() throws InterruptedException {

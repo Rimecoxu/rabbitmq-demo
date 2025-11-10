@@ -11,7 +11,7 @@ import org.springframework.messaging.handler.annotation.Header;
 /**
  * @Author: Rimecoxu@gmail.com
  * @CreateTime: 2025-11-10 18:39
- * @Description: ttl消息消费
+ * @Description: ttl消息消费方
  */
 @Slf4j
 // @Component

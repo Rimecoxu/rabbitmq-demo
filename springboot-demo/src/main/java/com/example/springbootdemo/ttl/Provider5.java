@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: Rimecoxu@gmail.com
  * @CreateTime: 2025-11-10 22:08
- * @Description: ttl 消息提供者
+ * @Description: ttl消息提供者
  */
 @Slf4j
 @Component
