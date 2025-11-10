@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.support.AmqpHeaders;
 import org.springframework.messaging.handler.annotation.Header;
-import org.springframework.stereotype.Component;
 
 /**
  * @Author: Rimecoxu@gmail.com
@@ -15,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @Description: 消息拒收消费方
  */
 @Slf4j
-@Component
+// @Component
 public class Consumer6 {
 
     @RabbitListener(queues = RabbitMqConfig.SP_DIRECT_QUEUE_NAME, ackMode = "MANUAL")
