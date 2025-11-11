@@ -35,7 +35,7 @@ public class DirectRabbitMqConfig {
         return ExchangeBuilder
                 .directExchange(SP_DIRECT_EXCHANGE_NAME)
                 // 设置为延迟交换机
-                .delayed()
+                // .delayed()
                 .build();
     }
 
