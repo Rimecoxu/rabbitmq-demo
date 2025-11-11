@@ -24,7 +24,7 @@ public class Provider8 {
         log.info("生产者8号发送消息: {}", message);
         Message msg = MessageBuilder
                 .withBody(message.getBytes())
-                // 设置延迟消息，即延迟10秒发送到交换机
+                // 设置延迟消息，即延迟10秒发送到队列
                 .setHeader("x-delay", 10000)
                 .build();
         log.info("消息发送时间: {}", new Date());
