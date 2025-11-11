@@ -32,7 +32,11 @@ public class DirectRabbitMqConfig {
      */
     @Bean("spDirectExchange")
     public Exchange exchange() {
-        return ExchangeBuilder.directExchange(SP_DIRECT_EXCHANGE_NAME).build();
+        return ExchangeBuilder
+                .directExchange(SP_DIRECT_EXCHANGE_NAME)
+                // 设置为延迟交换机
+                .delayed()
+                .build();
     }
 
     /**
